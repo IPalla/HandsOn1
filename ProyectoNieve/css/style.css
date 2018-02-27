@@ -55,13 +55,12 @@ nav{
         position: absolute; /*Posición sobre el raiz*/
         min-width: 140px;
     }
-    
-    
-
     nav li:hover > ul{ /*sub ul se coloca debajo cuando se pasa el ratón por encima*/
         display: block;
     }
-
+    nav ul li:hover{
+        background-color: red;
+    }
     nav ul li ul li{
         position: relative;
         font-size: 25px;
