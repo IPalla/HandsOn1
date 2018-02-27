@@ -1,12 +1,38 @@
 @import "./reset.css";
 
-.footer-copyright{
-    height: 7rem;
-    bottom: -1px;
-    background-color: #474e5d;
-    color: #ffffff;
+body{
+    font-family: 'Pacifico', cursive;
 }
-.container-fluid {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+
+nav img{
+    width: 10%;
+    height: 10%;
+    display: inline-block;
 }
+nav{
+    background-color: gainsboro;
+    border: solid 1px black;
+    margin: 0%;
+    width: 100%;
+}
+nav ul{
+    display: inline-block;
+    width: auto;
+}
+ nav li ul{
+     display: none;
+     position: absolute;
+     min-width: 140px;
+ }
+ nav ul li{
+     display: inline;
+     border: solid 1px black;
+ }
+ nav li:hover > ul{
+     display: block;
+ }
+
+ nav li ul li{
+     position: relative;
+     display: block;
+ }
