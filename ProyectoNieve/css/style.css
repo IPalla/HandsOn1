@@ -1,0 +1,12 @@
+@import "./reset.css";
+
+.footer-copyright{
+    height: 7rem;
+    bottom: -1px;
+    background-color: #474e5d;
+    color: #ffffff;
+}
+.container-fluid {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}

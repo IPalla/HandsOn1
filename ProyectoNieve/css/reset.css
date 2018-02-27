@@ -1,0 +1,7 @@
+*,
+*::before, *::after, *:before, *:after{
+    box-sizing: border-box;
+}
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
