@@ -97,15 +97,17 @@ aside {
 
 }
 
-    .templates figure{
+    .templates .fotoPlano{
         width: 40%;
         height: 30%;
         float: right;
         min-width: 300px;
         min-height: 200px;
+        max-width: 450px;
+        max-height: 400px;
     }
 
-    .templates figure img{
+    .fotoPlano img{
         border-radius: 84px 84px 84px 84px;
         -moz-border-radius: 84px 84px 84px 84px;
         -webkit-border-radius: 84px 84px 84px 84px;
