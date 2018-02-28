@@ -173,12 +173,12 @@ aside {
     width: 100%;
     height: 80%;
 }
-<<<<<<< HEAD
 p textarea{
     width: 50%;
-=======
-
+}
 .eltiempo div{
     display: inline;
->>>>>>> d3ff6b0db911a9f5655edae70bede8099c4c4569
+}
+.required{
+    color: red;
 }
