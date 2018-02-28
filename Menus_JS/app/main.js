@@ -1,49 +1,51 @@
-export class Main {
-    constructor() {
-        console.log("Main loaded")
-        this.vista = {
-            aBtnsMenu: document.querySelectorAll('a'),
-            eMain : document.querySelector('main'), 
-            aImports: document.querySelectorAll('link[rel="import"]'),
-            oImports: {}
-        }
-        // Manejador de eventos del menu
-        this.vista.aBtnsMenu.forEach( (item) => {
-            item.addEventListener('click',this.menuItems.bind(this),false)
-        })
-        // el array de selectores de los templates se convierte en un objeto
-        // con claves el title de los templates y valores los propios elementos
-        this.vista.aImports.forEach( (elem)  => {
-            this.vista.oImports[elem.title]=elem.import
-        })
-        console.log(this.vista.oImports)
-        this._cargarTemplate('inicio')
+
+/*Cuando hay errores del this pork cambia su valor se puede utilizar el metodo
+.bind(this) y ejecutaria el metodo que sea, lo de antes del punto del objeto this pasado
+    document.querySelectorAll("#btnRegistrar")[0].addEventListener("click",this.btnRegistrar.bind(this),false)
+    quiere decir que cuando encuentre un this dentro del objeto lo enlace a el this del bind
+    this.btnRegistrar.bind(this)
+*/
+class Main {
+
+    constructor(){
+        console.log("Documento Cargado")
+        //console.dir(window); -> directorio de todo el elemento window
+        console.log(document.querySelector("#btnSaludar"))
+        console.log(document.querySelectorAll("#btnRegistrar")[0])
+        document.querySelector("#btnSaludar").addEventListener("click",this.btnSaludar,false)
+        document.querySelectorAll("#btnRegistrar")[0].addEventListener("click",this.btnRegistrar,false)
+        document.querySelector("#btnGoogle").addEventListener("click",this.btnGoogle,false)
     }
 
-    menuItems(oEv) {
-        oEv.preventDefault()
-        console.log(`Pulsado ${oEv.target.id}`)
-        if (!this.vista.oImports[oEv.target.id]) {
-            // Si no existe template
-            this.vista.eMain.innerHTML = `
-            <article>
-                <h2>${oEv.target.id.toUpperCase()}</h2>
-            </article>`
-        } else {
-            this._cargarTemplate(oEv.target.id )
-        }
+    btnSaludar(){
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://opendata.aemet.es/opendata/api/valores/climatologicos/inventarioestaciones/todasestaciones/?api_key=jyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqbW9udGVyb2dAYWVtZXQuZXMiLCJqdGkiOiI3NDRiYmVhMy02NDEyLTQxYWMtYmYzOC01MjhlZWJlM2FhMWEiLCJleHAiOjE0NzUwNTg3ODcsImlzcyI6IkFFTUVUIiwiaWF0IjoxNDc0NjI2Nzg3LCJ1c2VySWQiOiI3NDRiYmVhMy02NDEyLTQxYWMtYmYzOC01MjhlZWJlM2FhMWEiLCJyb2xlIjoiIn0.xh3LstTlsP9h5cxz3TLmYF4uJwhOKzA0B6-vH8lPGGw",
+            "method": "GET",
+            "headers": {
+              "cache-control": "no-cache"
+            }
+          }
+          
+          $.ajax(settings).done(function (response) {
+            console.log(response);
+          });
     }
-
-    _cargarTemplate (id) {
-        // Se selecciona el import adecuado segun su nombre (title)
-        const IMPORT = this.vista.oImports[id]
-        console.log(IMPORT)
-        // del import se selecciona el template que contiene
-        const ELEM = IMPORT.querySelector(`#${id}`)
-        console.log(`#${id}`)
-        console.log(ELEM)
-        // el HTML del elemnto se añade en el punto adecuado
-        this.vista.eMain.innerHTML = ELEM.innerHTML
+    
+    btnRegistrar(){
+        let user = prompt("Dime tu Nombre","Pepe");
+    }
+    
+    //Interactua con la barra del navegador, tanto para leer como escribir
+    btnGoogle(){
+        console.log(window.location.href);
+        window.location.href="https://www.google.com"
     }
 
 }
+
+(function (){
+    document.addEventListener("DOMContentLoaded",
+        ()=>{oMain= new Main()},false);
+})();
