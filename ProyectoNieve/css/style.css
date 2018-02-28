@@ -98,3 +98,23 @@ article {
     text-align:left; 
     padding:.23em;
 }
+
+.cabecera mapa{
+    text-align:center;
+    background-color:#996633;
+    color:black;
+    color:white;
+}
+
+.fondoclaro{
+    text-align:left;
+    background-color: #F7F3F1; 
+    font-weight:bold;
+    width:35%;
+}
+
+.fondooscuro{
+    text-align:center;
+    background-color: #e9d4ca;
+}
+
