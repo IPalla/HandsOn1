@@ -76,7 +76,7 @@ aside {
     margin-right: 2%;
     border: solid black 2px;
     float: right;
-    width: 280px;
+    width: 300px;
 }
 
     aside figure{
@@ -90,4 +90,11 @@ article {
     margin-top: 6px;
     margin-left: 6px;
     border: 1px solid black;
+}
+
+.infobox{
+    width:auto; 
+    line-height: 1.4em; 
+    text-align:left; 
+    padding:.23em;
 }
