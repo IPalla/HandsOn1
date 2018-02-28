@@ -1,6 +1,5 @@
 export class Main{
     constructor(){
-        console.log("Cargado");
         this.vista = {
             botonesMenu: document.querySelectorAll('nav ul li a'),          //Botones del menu
             articleHtml: document.querySelector('article'),
@@ -12,8 +11,6 @@ export class Main{
             item.addEventListener('click',this.menuItems.bind(this),true);
             this.bindTemplates(item);
         })
-        console.dir(this.vista.keyTemplates);
-        console.dir(this.vista.templates);
     }
     /*
          Si un botón es pulsado carga la template correspondiente a su valor
@@ -21,8 +18,14 @@ export class Main{
 
     menuItems(oEv) {
         oEv.preventDefault();
+        //Si el boton pulsado es el about el aside se oculta.
+        if(oEv.target.id=='btnAbout'){
+            document.querySelector('aside').className='oculto';
+        }
+        else{
+            document.querySelector('aside').className='';
+        }
         var toInyect = this.vista.keyTemplates[oEv.target.id].querySelector('template');
-        console.log(oEv.target.id);
         if(toInyect){
             this.vista.articleHtml.innerHTML=toInyect.innerHTML;
         }

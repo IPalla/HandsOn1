@@ -98,3 +98,7 @@ article {
     text-align:left; 
     padding:.23em;
 }
+
+.oculto{
+    display: none;
+}
