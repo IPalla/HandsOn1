@@ -1,0 +1,15 @@
+*,
+*::before, *::after,
+*:before, *:afer {
+box-sizing : border-box;
+}
+
+.container{
+    width: 60%;
+    margin: 2em auto;
+}
+
+footer{
+    margin-top: 4em;
+    border-top: solid 1px;
+}

@@ -86,11 +86,33 @@ aside {
         height: 273px;
     }
 
-article {
+.templates {
+
     margin-top: 6px;
-    margin-left: 6px;
+    margin-left: 10px;
+    margin-right: 10px;
     border: 1px solid black;
+    font-family: 'Titillium Web', sans-serif;
+
+
 }
+
+    .templates figure{
+        width: 40%;
+        height: 30%;
+        float: right;
+        min-width: 300px;
+        min-height: 200px;
+    }
+
+    .templates figure img{
+        border-radius: 84px 84px 84px 84px;
+        -moz-border-radius: 84px 84px 84px 84px;
+        -webkit-border-radius: 84px 84px 84px 84px;
+        border: 4px solid aqua;
+        width: 100%;
+        height: 100%;
+    }
 
 .infobox{
     width:auto; 
@@ -149,6 +171,12 @@ article {
     width: 100%;
     height: 80%;
 }
+<<<<<<< HEAD
 p textarea{
     width: 50%;
+=======
+
+.eltiempo div{
+    display: inline;
+>>>>>>> d3ff6b0db911a9f5655edae70bede8099c4c4569
 }
