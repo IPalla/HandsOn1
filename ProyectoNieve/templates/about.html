@@ -1,6 +1,6 @@
 <template id="About">
     <div class="perfiles">
-        <h2>About Us</h2>
+        <h2>Nuestro equipo</h2>
         <div class="perfil">
             <h3>Ignacio Pallares</h3>
             <figure>
@@ -10,7 +10,7 @@
                 Ignacio Pallarés es Ingeniero Informático. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, perferendis debitis, sequi veritatis iste non vero, nesciunt ea quisquam nihil necessitatibus in dolorem consequuntur laborum. Fugit reiciendis harum doloribus architecto?
             </h4>
             <div class="social">
-                <h4><a href="mailto: david.gonzalez@babel.es"><i class="fa fa-envelope" alt ="david.gonzalez@babel.es"></i></a>
+                <h4><a href="mailto: ignacio.pallares@babel.es"><i class="fa fa-envelope" alt ="david.gonzalez@babel.es"></i></a>
                 <h4><a href="https://www.linkedin.com/in/ignacio-pallar%C3%A9s-jim%C3%A9nez-393358157/"> <i class="fa fa-linkedin"></i></a></h4>
             </div>
         </div>
@@ -31,7 +31,38 @@
                 <h4>
                     David González es Ingeniero de Telecomunicaciones. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolore nostrum eaque numquam, repellendus aliquid culpa? Quod, et eius itaque vero modi, natus dolor inventore sunt dolores saepe omnis suscipit.
                 </h4>
-                
         </div>
+    </div>
+    <div class="contact">
+        <h2>Contacta con nosotros <i class="fa fa-comments"></i></h2>
+        <form>
+            <p>
+                <label for="Nombre">Nombre:</label>
+                <input type="text" id="Nombre" name="Nombre" size="30" placeholder="Escriba su nombre">
+            </p>
+            <p>
+                <label for="Email">Email:</label>
+                <input type="email" id="Email" name="Email" size="30" placeholder="Escriba su correo">
+            </p>
+            <p>
+                <ul>
+                    <li><label id="Preferencia" for="Preferencia">Preferencia:</label></li>
+                    <li>
+                        <ul>
+                            <li><input type="radio" value="esqui" name="Preferncia" id="Preferencia_esqui" /> Esquí</li>
+                            <li><input type="radio" value="snow" name="Preferncia" id="Preferencia_snow" /> Snow</li>
+                        </ul>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                    <label for="Comentario">Comentario:</label>
+            </p>
+            <p>
+                <textarea name="Comentario" id="Comentario" rows="6"></textarea>
+            </p>
+            <button>Enviar</button>
+            <input type="reset" value="Reset">
+        </form>
     </div>
 </template>
