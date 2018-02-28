@@ -69,21 +69,64 @@ export class Main{
         let comentario=document.getElementById("Comentario").value;
         let esqui=document.getElementById("Preferencia_esqui").checked;
         let snow=document.getElementById("Preferencia_snow").checked;
+        let valid=true;
+        let preferencia;
         if(comentario.length < 5){
             document.getElementById("Comentario").placeholder="Mínimo 5 caracteres";
-            document.getElementById("Comentario").className='required';
+            document.getElementById("label_Comentario").className='required';
+            valid=false;
         }
         else{
-            document.getElementById("Comentario").className='';
+            document.getElementById("label_Comentario").className='';
         }
-        console.dir(esqui);
-        console.dir(snow);
-        if(!esqui && !snow){
-            document.getElementById("Preferencia").className="required";
-        }
-        else{
-            document.getElementById("Preferencia").className="";
-        }
+        (email.length <5) ? document.getElementById("label_Email").className='required' : document.getElementById("label_Email").className='';
+        (nombre.length < 3)  ? document.getElementById("label_Nombre").className='required' :  document.getElementById("label_Nombre").className='';
 
+        if(!esqui && !snow){
+            document.getElementById("label_Preferencia").className="required";
+            valid=false;
+        }
+        else{
+            document.getElementById("label_Preferencia").className="";
+        }
+        if(valid && email.length>=5 && nombre.length>=3){
+            this.form.nombre=nombre;
+            this.form.email=email;
+            (esqui) ? preferencia="Esqui" : preferencia="Snow";
+            this.form.preferencia=preferencia;
+            this.form.comentario=comentario;
+            localStorage.setItem("form", JSON.stringify(this.form))
+            this.muestraForm();
+        }
+    }
+    muestraForm(){
+        var toInyect;
+        if(localStorage.getItem("form")){
+            this.vista.templates.forEach( (temp) => {
+                if(temp.title == "Form"){
+                    toInyect =temp.import.querySelector('template');
+                }
+                if(toInyect){
+                    this.vista.articleHtml.innerHTML=toInyect.innerHTML;
+                }
+            })
+            //document.getElementById('btnVolver').addEventListener('click',this.muestraAbout.bind(this),true);
+        }
+    }
+    muestraAbout(oEv){
+        document.querySelector('aside').className='oculto';ent.querySelector('aside').className='';
+        var toInyect = this.vista.keyTemplates['btnAbout'].querySelector('template');
+        if(toInyect){
+            this.vista.articleHtml.innerHTML=toInyect.innerHTML;
+        }
+        else{
+            this.vista.articleHtml.innerHTML="<h2>Ocurrio un error cargando el template</h2>";
+        }
+        this.vista.articleHtml.innerHTML=toInyect.innerHTML;
+
+        this.vista.botonEnviar=document.querySelector('button');
+        if(this.vista.botonEnviar){ //Si existe boton enviar (about) se añade el event listener
+            this.vista.botonEnviar.addEventListener('click', this.botonFormulario.bind(this));
+        }
     }
 }
