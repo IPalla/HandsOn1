@@ -60,12 +60,12 @@ nav{
     width: 100%;
     height: 50px;
 }
-    nav ul{
+    nav .nav_unresponsive{
         
         margin-left: 2%;
         display: inline;
     }
-    nav ul li{
+    nav .nav_unresponsive li{
         padding-left: 10px;
         padding-right: 10px;
         font-size: 28px;
@@ -73,18 +73,18 @@ nav{
         border: solid 1px black;
         background-color: lightblue;
     }
-    nav ul li ul{
+    nav .nav_unresponsive li ul{
         display: none;
-        position: absolute; /*Posición sobre el raiz*/
+        position: absolute; 
         min-width: 140px;
     }
-    nav li:hover > ul{ /*sub ul se coloca debajo cuando se pasa el ratón por encima*/
+    nav li:hover > ul{ 
         display: block;
     }
-    nav ul li:hover{
+    nav .nav_unresponsive li:hover{
         background-color: red;
     }
-    nav ul li ul li{
+    nav .nav_unresponsive li ul li{
         position: relative;
         font-size: 25px;
         display: block;
@@ -92,7 +92,7 @@ nav{
     nav a{
         margin: 10px;
         padding: 10px;
-    }
+    } 
 
 aside {
     margin-top: 6px;
@@ -233,4 +233,63 @@ textarea{
     height: 100%;
     display: inline;
     border: 1px solid black;
+}
+
+/*-----Menu responsive--------*/
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav div {
+    text-align: center;
+    border: 1px black solid;
+}
+    nav div {
+        font-size:40px;
+    }
+    .nav_responsive li{
+        font-size: 28px;
+        display: block;
+        border: solid 1px black;
+        background-color: LightSlateGray ;
+        text-align: center;
+    }
+    .nav_responsive li ul{
+        display: none;
+        position: relative; /*Posición sobre el raiz*/
+        
+        width: 100%;
+    }
+    nav li:hover > ul{ /*sub ul se coloca debajo cuando se pasa el ratón por encima*/
+        display: block;
+    }
+    .nav_responsive li:hover ul li:hover{
+        background-color: Lavender;
+    }
+    .nav_responsive li ul li{
+        background-color: LightBlue ;
+        position: relative;
+        font-size: 25px;
+        display: block;
+        width:100%;
+    }
+
+    nav div {
+        display: none;
+    }
+@media only screen and (max-width: 950px) {
+    aside{
+        display: none;
+    }
+    nav .nav_unresponsive {
+        display: none;
+    }
+    nav div {
+        display: block;
+    }
+    .nav_responsive{
+        display:none;
+    }
 }
