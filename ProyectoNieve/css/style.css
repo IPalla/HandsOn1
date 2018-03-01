@@ -119,8 +119,8 @@ aside {
 
 
 }
-
-    .templates .fotoPlano{
+/* 
+ .templates .fotoPlano{
         width: 40%;
         height: 30%;
         float: right;
@@ -128,17 +128,17 @@ aside {
         min-height: 200px;
         max-width: 450px;
         max-height: 400px;
-    }
+    } 
 
     .fotoPlano img{
-        border-radius: 84px 84px 84px 84px;
+         border-radius: 84px 84px 84px 84px;
         -moz-border-radius: 84px 84px 84px 84px;
         -webkit-border-radius: 84px 84px 84px 84px;
         border: 4px solid aqua;
         width: 100%;
-        height: 100%;
+        height: 100%; 
     }
-
+ */
 .infobox{
     width:auto; 
     line-height: 1.4em; 
@@ -205,4 +205,34 @@ textarea{
 }
 .required{
     color: red;
+}
+
+
+
+
+.FichaTiempo{
+    float: left;
+    width: 40%;
+    height: 100%;
+    display: inline;
+    border: 1px solid black;
+}
+.fotoPlano img{
+    width: 90%;
+    height: 90%;
+    max-width: 250px;
+    max-height: 320px;
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+
+}
+
+.fotoPlano{
+    float: left;
+    width: 33%;
+    height: 100%;
+    display: inline;
+    border: 1px solid black;
 }

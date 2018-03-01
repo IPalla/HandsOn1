@@ -29,6 +29,7 @@ export class Main{
 
     menuItems(oEv) {
         oEv.preventDefault();
+        console.log(oEv.target.name);
         //El template about tiene un tratamiento especial, por lo que si el boton pulsado es about se llama a la función muestraAbout()
         if(oEv.target.id=='btnAbout'){
             this.muestraAbout();
