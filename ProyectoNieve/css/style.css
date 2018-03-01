@@ -200,7 +200,8 @@ textarea{
     width: 50%;
 }
 .eltiempo div{
-    display: inline;
+    display: none;
+    float:left;
 }
 .required{
     color: red;
