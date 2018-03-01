@@ -59,11 +59,11 @@ export class Main{
         else{
             this.vista.articleHtml.innerHTML="<h2>Ocurrio un error cargando el template</h2>";
         }
-        this.vista.articleHtml.innerHTML=toInyect.innerHTML;
-        document.getElementById("a").style="display: none"
+        //this.vista.articleHtml.innerHTML=toInyect.innerHTML;
+        //document.getElementById("a").style="display: none"
     }
     /*
-        Esta funcion es la encargada de crear el array asociativo boton-template. Los templates deben tener como título el id
+        Esta funcion es la encargada de crear el array asociativo boton-template. Los templates deben tener como título el nombre
         del boton al que hacen referencia sin el prefijo "btn".
         En caso de que exista algún botón sin que ningún template lo referencie se le asociará el primer template
         cargado. La clave del array es el id del botón y el valor es el template.

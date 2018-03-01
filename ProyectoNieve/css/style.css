@@ -55,7 +55,7 @@ nav{
     background-color: gainsboro;
     margin: 0%;
     width: 100%;
-    height: 50px;
+    height: auto;
 }
     nav .nav_unresponsive{
         
@@ -225,9 +225,6 @@ textarea{
 }
 
 .fotoPlano{
-    float: left;
-    width: 33%;
-    height: 100%;
     display: inline;
 }
 
@@ -245,6 +242,7 @@ nav div {
 }
 .nav_responsive{
     position: relative;
+    z-index:1;
 }
     .nav_responsive li{
         font-size: 28px;
@@ -298,19 +296,6 @@ nav div {
         position: relative;
     }
     
-    .fotoPlano img{
-        width: 90%;
-        height: 90%;
-        max-width: 450px;
-        max-height: 520px;
-    
-        min-width: 250px;
-        min-height: 320px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto; 
-    
-    }
     .fotoPlano{
         float: none;
         display: block;
@@ -319,6 +304,20 @@ nav div {
         margin: auto;
         position: relative;
     }
+        .fotoPlano img{
+            width: 90%;
+            height: 90%;
+            max-width: 450px;
+            max-height: 520px;
+
+            min-width: 250px;
+            min-height: 320px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto; 
+
+        }
+    
     
 }
 @media only screen and (max-width: 970px){
@@ -331,6 +330,15 @@ nav div {
     .fotoPlano{
         display: none;
     }
+    header{
+        text-align: center;
+    }
+    header figure{
+        float: none;
+        display: block;
+        margin: auto;
+    } 
+
     header p{
         display: none;
     }
