@@ -53,7 +53,7 @@ export class Main{
             this.vista.articleHtml.innerHTML="<h2>Ocurrio un error cargando el template</h2>";
         }
         this.vista.articleHtml.innerHTML=toInyect.innerHTML;
-
+        console.log()
     }
     /*
         Esta funcion es la encargada de crear el array asociativo boton-template. Los templates deben tener como título el id
