@@ -19,6 +19,7 @@ export class Main{
             preferencia: null,
             comentario: null
         }
+        this.menuItems();
     }
     /*
          Si un botón es pulsado carga la template correspondiente a su valor. En el caso de no ser about se realizan las siguientes acciones:
@@ -28,17 +29,23 @@ export class Main{
     */
 
     menuItems(oEv) {
+        //Caso default
+        if(!oEv){
+            var toInyect = this.vista.keyTemplates["btnPuertoDeNavacerrada"].querySelector('template');
+            this.vista.articleHtml.innerHTML=toInyect.innerHTML;
+            return;
+        }
         oEv.preventDefault();
         console.log(oEv.target.name);
         //El template about tiene un tratamiento especial, por lo que si el boton pulsado es about se llama a la función muestraAbout()
-        if(oEv.target.id=='btnAbout'){
+        if(oEv.target.name=='btnAbout'){
             this.muestraAbout();
             return;
         }
         else{
             document.querySelector('aside').className='';
         }
-        var toInyect = this.vista.keyTemplates[oEv.target.id].querySelector('template');
+        var toInyect = this.vista.keyTemplates[oEv.target.name].querySelector('template');
         if(toInyect){
             this.vista.articleHtml.innerHTML=toInyect.innerHTML;
         }
@@ -59,12 +66,12 @@ export class Main{
     */
     bindTemplates(button){
         this.vista.templates.forEach( (temp) => {
-            if(temp.title == button.id.substring(3)){
-                this.vista.keyTemplates[button.id]=temp.import;
+            if(temp.title == button.name.substring(3)){
+                this.vista.keyTemplates[button.name]=temp.import;
             }
         })
-        if (!this.vista.keyTemplates[button.id]){
-            this.vista.keyTemplates[button.id]=this.vista.templates[0].import;
+        if (!this.vista.keyTemplates[button.name]){
+            this.vista.keyTemplates[button.name]=this.vista.templates[0].import;
         }
     }
     /*
