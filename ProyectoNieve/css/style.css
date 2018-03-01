@@ -177,7 +177,7 @@ aside {
     display: block;
     margin-left: auto;
     margin-right: auto;    
-    -radius: 50%;
+    border-radius: 50%;
 }
 .perfiles{
     float:left;
@@ -240,10 +240,12 @@ ul {
 
 nav div {
     text-align: center;
+    font-size:40px;
+    display: none;
 }
-    nav div {
-        font-size:40px;
-    }
+.nav_responsive{
+    position: relative;
+}
     .nav_responsive li{
         font-size: 28px;
         display: block;
@@ -268,10 +270,6 @@ nav div {
         font-size: 25px;
         display: block;
         width:100%;
-    }
-
-    nav div {
-        display: none;
     }
 @media only screen and (max-width: 1095px) {
     
@@ -351,7 +349,7 @@ main{
 main table{
     text-align: center;
     align-content: center;
-    display: block;
+    display: table;
     margin-left: auto;
     margin-right: auto; 
 }
