@@ -5,14 +5,21 @@ export class Main{
             botonEnviar: null,                                              //Boton de enviar formulario. No se hace el selector hasta q se pulsa about
             articleHtml: document.querySelector('article'),
             templates: document.querySelectorAll('link[rel="import"]'),     //Templates importados
-            keyTemplates: {}                                                //Array indexada, clave= id del boton, valor= template
+            keyTemplates: {},   //Array indexada, clave= id del boton, valor= template
+            navExpand: document.querySelector('#panel_expand'),    //Div que depliega el menu   
+            botonPlus: document.querySelector('#expand'),
+            botonLess: document.querySelector('#contract')
         }
+
+        this.vista.botonLess.style="display: none;" 
         // Manejador de eventos del menu nav
         this.vista.botonesMenu.forEach( (item) => {
             item.addEventListener('click',this.menuItems.bind(this),true);
             this.bindTemplates(item);
         })
-        //form guardará los valores del form
+        this.vista.navExpand.addEventListener('click',this.navExpand.bind(this),true);
+        
+               //form guardará los valores del form
         this.form={
             nombre: null,
             email: null,
@@ -209,5 +216,21 @@ export class Main{
                 document.getElementById('Preferencia_esqui').checked=true;
             }
         }
+    }
+
+    navExpand(oEv){
+        console.log(oEv.target.id);
+        
+        if(this.vista.botonPlus.style.display=='none'){
+            document.getElementById('nav_responsive').style="display: none;"
+            this.vista.botonPlus.style="display: inherit;"
+            this.vista.botonLess.style="display: none;" 
+        }
+        else{
+            document.getElementById('nav_responsive').style="display: inherit;"
+            this.vista.botonPlus.style="display: none;"
+            this.vista.botonLess.style="display: inherit;" 
+        }
+
     }
 }
