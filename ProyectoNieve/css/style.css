@@ -19,10 +19,9 @@ html:after {
 
 
 #iconoprincipal {
-    border-radius: 200px 200px 200px 200px;
-    -moz-border-radius: 200px 200px 200px 200px;
-    -webkit-border-radius: 200px 200px 200px 200px;
-    border: 0px solid #000000;  
+    -radius: 200px 200px 200px 200px;
+    -moz--radius: 200px 200px 200px 200px;
+    -webkit--radius: 200px 200px 200px 200px;
 }
 
 
@@ -33,7 +32,6 @@ header {
     margin-right: 2%;
     width: 94%;
     font-weight: bold;
-    border: solid 2px black;
 }
 
     header figure{
@@ -55,7 +53,6 @@ header {
 nav{
     font-family: 'Pragati Narrow', sans-serif;
     background-color: gainsboro;
-    border: solid 1px black;
     margin: 0%;
     width: 100%;
     height: 50px;
@@ -70,7 +67,6 @@ nav{
         padding-right: 10px;
         font-size: 28px;
         display: inline;
-        border: solid 1px black;
         background-color: lightblue;
     }
     nav .nav_unresponsive li ul{
@@ -97,7 +93,6 @@ nav{
 aside {
     margin-top: 6px;
     margin-right: 2%;
-    border: solid black 2px;
     float: right;
     width: 300px;
 }
@@ -114,7 +109,6 @@ aside {
     margin-top: 6px;
     margin-left: 10px;
     margin-right: 10px;
-    border: 1px solid black;
     font-family: 'Titillium Web', sans-serif;
 
 
@@ -131,10 +125,10 @@ aside {
     } 
 
     .fotoPlano img{
-         border-radius: 84px 84px 84px 84px;
-        -moz-border-radius: 84px 84px 84px 84px;
-        -webkit-border-radius: 84px 84px 84px 84px;
-        border: 4px solid aqua;
+         -radius: 84px 84px 84px 84px;
+        -moz--radius: 84px 84px 84px 84px;
+        -webkit--radius: 84px 84px 84px 84px;
+        : 4px solid aqua;
         width: 100%;
         height: 100%; 
     }*/
@@ -173,7 +167,6 @@ aside {
     width: 33%;
     height: 100%;
     display: inline;
-    border: 1px solid black;
 }
 .perfil img{
     width: 90%;
@@ -184,7 +177,7 @@ aside {
     display: block;
     margin-left: auto;
     margin-right: auto;    
-    border-radius: 50%;
+    -radius: 50%;
 }
 .perfiles{
     float:left;
@@ -209,17 +202,21 @@ textarea{
 
 .FichaTiempo{
     float: left;
-    width: 40%;
+    width: 30%;
     height: 100%;
     display: inline;
-    border: 1px solid black;
 }
 
 .fotoPlano img{
     width: 90%;
     height: 90%;
-    max-width: 250px;
-    max-height: 320px;
+    max-width: 450px;
+    max-height: 520px;
+
+    min-width: 250px;
+    min-height: 320px;
+
+    
     
     display: block;
     margin-left: auto;
@@ -232,7 +229,6 @@ textarea{
     width: 33%;
     height: 100%;
     display: inline;
-    border: 1px solid black;
 }
 
 /*-----Menu responsive--------*/
@@ -244,7 +240,6 @@ ul {
 
 nav div {
     text-align: center;
-    border: 1px black solid;
 }
     nav div {
         font-size:40px;
@@ -252,7 +247,6 @@ nav div {
     .nav_responsive li{
         font-size: 28px;
         display: block;
-        border: solid 1px black;
         background-color: LightSlateGray ;
         text-align: center;
     }
@@ -279,10 +273,8 @@ nav div {
     nav div {
         display: none;
     }
-@media only screen and (max-width: 950px) {
-    aside{
-        display: none;
-    }
+@media only screen and (max-width: 1095px) {
+    
     nav .nav_unresponsive {
         display: none;
     }
@@ -292,4 +284,74 @@ nav div {
     .nav_responsive{
         display:none;
     }
+
+    .FichaTiempo{
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+        align-content: center;
+        margin: auto;
+        position: relative;
+    }
+    
+    .fotoPlano img{
+        width: 90%;
+        height: 90%;
+        max-width: 450px;
+        max-height: 520px;
+    
+        min-width: 250px;
+        min-height: 320px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; 
+    
+    }
+    .fotoPlano{
+        float: none;
+        display: block;
+        text-align: center;
+        align-content: center;
+        margin: auto;
+        position: relative;
+    }
+    
+}
+@media only screen and (max-width: 970px){
+    
+    aside{
+        display: none;
+    }
+}
+@media only screen and (max-width: 605px){
+    .fotoPlano{
+        display: none;
+    }
+    header p{
+        display: none;
+    }
+    header h1{
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width: 440px){
+    
+    header h1{
+        font-size: 1.5rem;
+    }
+} 
+main{
+    text-align: center;
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+main table{
+    text-align: center;
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
 }
