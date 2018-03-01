@@ -1,7 +1,7 @@
 export class Main{
     constructor(){
         this.vista = {
-            botonesMenu: document.querySelectorAll('nav ul li a'),          //Botones del menu
+            botonesMenu: document.querySelectorAll('a'),          //Botones del menu
             botonEnviar: null,                                              //Boton de enviar formulario. No se hace el selector hasta q se pulsa about
             articleHtml: document.querySelector('article'),
             templates: document.querySelectorAll('link[rel="import"]'),     //Templates importados

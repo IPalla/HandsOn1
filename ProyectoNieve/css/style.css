@@ -272,7 +272,12 @@ nav div {
         width:100%;
     }
 @media only screen and (max-width: 1095px) {
-    
+    nav ul{
+        position: relative;
+    }
+    main{
+        position: relative;
+    }
     nav .nav_unresponsive {
         display: none;
     }
