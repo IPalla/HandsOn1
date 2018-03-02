@@ -200,6 +200,9 @@ textarea{
     height: 100%;
     display: inline;
 }
+.FichaTiempo td{
+    padding: 10px;
+}
 
 .fotoPlano img{
     width: 90%;
@@ -227,6 +230,7 @@ footer {
     height: auto; /* valor que necesites */
     width: 100%;
     text-align: center;
+    padding-top: 5%;
 }
     address p{
         display: inline-block;
@@ -335,10 +339,19 @@ footer {
         font-size: 2rem;
     }
 }
+
+footer img{
+    width: 12%;
+    height: 12%;
+}
 @media only screen and (max-width: 440px){
     
     header h1{
         font-size: 1.5rem;
+    }
+    footer img{
+        width: 30%;
+        height: 30%;
     }
 } 
  main{
