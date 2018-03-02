@@ -217,15 +217,15 @@ textarea{
     display: inline;
 }
 
-footer {
+/*footer { 
     bottom: 0px;
-    height: auto; /* valor que necesites */
+    height: auto;
     position: relative;
     width: 100%;
     text-align: center;
-    background-color: gainsboro;
+    background-color: gainsboro; 
 }
-
+*/
 @media only screen and (max-width: 1095px) {
     nav div {
         display: block;

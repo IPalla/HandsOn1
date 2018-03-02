@@ -43,16 +43,15 @@ export class Main{
             return;
         }
         oEv.preventDefault();
-        console.log(oEv.target.name);
         //El template about tiene un tratamiento especial, por lo que si el boton pulsado es about se llama a la función muestraAbout()
-        if(oEv.target.name=='btnAbout'){
+        if(oEv.target.id=='btnAbout'){
             this.muestraAbout();
             return;
         }
         else{
             document.querySelector('aside').className='';
         }
-        var toInyect = this.vista.keyTemplates[oEv.target.name].querySelector('template');
+        var toInyect = this.vista.keyTemplates[oEv.target.id].querySelector('template');
         if(toInyect){
             this.vista.articleHtml.innerHTML=toInyect.innerHTML;
         }
@@ -73,12 +72,12 @@ export class Main{
     */
     bindTemplates(button){
         this.vista.templates.forEach( (temp) => {
-            if(temp.title == button.name.substring(3)){
-                this.vista.keyTemplates[button.name]=temp.import;
+            if(temp.title == button.id.substring(3)){
+                this.vista.keyTemplates[button.id]=temp.import;
             }
         })
-        if (!this.vista.keyTemplates[button.name]){
-            this.vista.keyTemplates[button.name]=this.vista.templates[0].import;
+        if (!this.vista.keyTemplates[button.id]){
+            this.vista.keyTemplates[button.id]=this.vista.templates[0].import;
         }
     }
     /*
@@ -97,6 +96,7 @@ export class Main{
         let snow=document.getElementById("Preferencia_snow").checked;
         let valid=true;
         let preferencia;
+        let i;
         if(comentario.length < 5){
             document.getElementById("Comentario").placeholder="Mínimo 5 caracteres";
             document.getElementById("label_Comentario").className='required';
@@ -107,7 +107,16 @@ export class Main{
         }
         (email.length <5) ? document.getElementById("label_Email").className='required' : document.getElementById("label_Email").className='';
         (nombre.length < 3)  ? document.getElementById("label_Nombre").className='required' :  document.getElementById("label_Nombre").className='';
+        
+        for (i=1; i<email.length-1; i++){
+            if(email[i] == '@' && email.length>=5)
+                break;
+        }
+        if(i==email.length-1){ //No ha encontrado ninguna arroba en el correo
+            document.getElementById("label_Email").className='required';
+            valid=false;
 
+        }
         if(!esqui && !snow){
             document.getElementById("label_Preferencia").className="required";
             valid=false;
@@ -219,7 +228,6 @@ export class Main{
     }
 
     navExpand(oEv){
-        console.log(oEv.target.id);
         
         if(this.vista.botonPlus.style.display=='none'){
             document.getElementById('nav_responsive').style="display: none;"
