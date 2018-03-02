@@ -338,3 +338,44 @@ main table{
     margin-left: auto;
     margin-right: auto; 
 }
+
+
+/* RESPONSIVE DE ABOUT */
+
+.perfil h4{
+    text-align: justify;
+}
+.perfil .social h4{
+    text-align: center;
+}
+.perfil{
+    padding: 5%;
+    padding-top: 1%;
+}
+form{
+    padding-top: 5%;
+    text-align: left;
+    padding-left:30%;
+    padding-right: 30%;
+    padding-bottom: 5%;
+    align-content: center;
+}
+form input[type='text'], form input[type='email'], form textarea{
+    width: 100%;
+}
+@media only screen and (max-width: 1095px){
+    .perfil{
+        display: block;
+        width: 100%;
+    }
+    form{
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}
+@media only screen and (max-width: 670px){
+    form{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
