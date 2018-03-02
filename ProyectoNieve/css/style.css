@@ -1,4 +1,7 @@
 @import "./reset.css";
+html{
+    max-width: 1600px;
+}
 
 body {
     margin: 0px;
@@ -108,6 +111,7 @@ aside {
     float: right;
     width: 300px;
     height: auto;
+
 }
 
     aside figure{
@@ -132,6 +136,8 @@ aside {
     line-height: 1.4em; 
     text-align:left; 
     padding:.23em;
+    background-color: #F7F3F1;
+    border: solid 1px black;
 }
 
 .cabecera{
@@ -235,40 +241,18 @@ footer {
     address p{
         display: inline-block;
     }
+.article_2{
+    padding-top: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: justify;
+}
+.article_2 h3{
+    font-weight: normal;
+}
 
 @media only screen and (max-width: 1095px) {
-    nav div {
-        display: block;
-    }
-
-    nav .nav_list_menu{   
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        position: relative;
-        display: none;
-        z-index:1;
-    }
-
-    nav .nav_list_menu li{
-        display: block;
-        background-color: LightSlateGray ;
-        text-align: center;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    nav .nav_list_menu li ul {
-        min-width: none;
-        position: relative;  
-        margin-left: 0%;
-        width: 100%;
-    }
-
-    nav.nav_responsive li ul li{
-        width:100%;
-    }
-
+   
     main{
         position: relative;
     }
@@ -313,11 +297,47 @@ footer {
     
     
 }
+
 @media only screen and (max-width: 1126px){
     
     aside{
         display: none;
     }
+    
+}
+@media only screen and (max-width: 900px){
+    nav div {
+        display: block;
+    }
+
+    nav .nav_list_menu{   
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: relative;
+        display: none;
+        z-index:1;
+    }
+
+    nav .nav_list_menu li{
+        display: block;
+        background-color: LightSlateGray ;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    nav .nav_list_menu li ul {
+        min-width: none;
+        position: relative;  
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    nav.nav_responsive li ul li{
+        width:100%;
+    }
+
 }
 @media only screen and (max-width: 605px){
     /* .fotoPlano{

@@ -3,7 +3,7 @@ export class Main{
         this.vista = {
             botonesMenu: document.querySelectorAll('a'),          //Botones del menu
             botonEnviar: null,                                              //Boton de enviar formulario. No se hace el selector hasta q se pulsa about
-            articleHtml: document.querySelector('article'),
+            articleHtml: document.querySelector('main'),
             templates: document.querySelectorAll('link[rel="import"]'),     //Templates importados
             keyTemplates: {},   //Array indexada, clave= id del boton, valor= template
             navExpand: document.querySelector('#panel_expand'),    //Div que depliega el menu   
