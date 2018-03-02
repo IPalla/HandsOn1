@@ -13,3 +13,6 @@ El tema de la página Web se centra en mostrar la información relacionada con l
 - Borde redondeado a la imagen del logo
 - Añadir LinkEdin y correo al about
 - Fondo al aside
+- Validar código html5
+- Estilo al about
+- Imagen responsive de los templates
