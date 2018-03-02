@@ -49,6 +49,9 @@ header {
     header p{
         margin-top: 2px;
     }
+    header img{
+        width: 100%;
+    }
 
 
 nav{
