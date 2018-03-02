@@ -102,6 +102,7 @@ aside {
     margin-right: 2%;
     float: right;
     width: 300px;
+    height: auto;
 }
 
     aside figure{
@@ -214,6 +215,15 @@ textarea{
 
 .fotoPlano{
     display: inline;
+}
+
+footer {
+    bottom: 0px;
+    height: auto; /* valor que necesites */
+    position: relative;
+    width: 100%;
+    text-align: center;
+    background-color: gainsboro;
 }
 
 @media only screen and (max-width: 1095px) {
