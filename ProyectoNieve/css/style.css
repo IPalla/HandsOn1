@@ -19,9 +19,10 @@ html:after {
 
 
 #iconoprincipal {
-    -radius: 200px 200px 200px 200px;
-    -moz--radius: 200px 200px 200px 200px;
-    -webkit--radius: 200px 200px 200px 200px;
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 0px solid #000000;
 }
 
 
