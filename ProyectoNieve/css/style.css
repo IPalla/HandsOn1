@@ -57,34 +57,41 @@ nav{
     width: 100%;
     height: auto;
 }
-    nav .nav_unresponsive{
-        
+    nav div {
+        display: none;
+        text-align: center;
+        font-size:40px;
+    }
+    nav .nav_list_menu{
         margin-left: 2%;
         display: inline;
     }
-    nav .nav_unresponsive li{
-        padding-left: 10px;
+    nav .nav_list_menu li{
+        
         padding-right: 10px;
         font-size: 28px;
         display: inline;
         background-color: lightblue;
     }
-    nav .nav_unresponsive li ul{
+    nav .nav_list_menu li ul{
         display: none;
         position: absolute; 
+        margin-left: 2%;
         min-width: 140px;
     }
     nav li:hover > ul{ 
         display: block;
     }
-    nav .nav_unresponsive li:hover{
-        background-color: red;
+    nav .nav_list_menu li:hover{
+        background-color:dodgerblue;
     }
-    nav .nav_unresponsive li ul li{
+    nav .nav_list_menu li ul li{
+        background-color: rgb(173, 219, 230) ;
         position: relative;
         font-size: 25px;
         display: block;
     }
+
     nav a{
         margin: 10px;
         padding: 10px;
@@ -113,25 +120,6 @@ aside {
 
 
 }
- 
- /*.templates .fotoPlano{
-        width: 40%;
-        height: 30%;
-        float: right;
-        min-width: 300px;
-        min-height: 200px;
-        max-width: 450px;
-        max-height: 400px;
-    } 
-
-    .fotoPlano img{
-         -radius: 84px 84px 84px 84px;
-        -moz--radius: 84px 84px 84px 84px;
-        -webkit--radius: 84px 84px 84px 84px;
-        : 4px solid aqua;
-        width: 100%;
-        height: 100%; 
-    }*/
  
 .infobox{
     width:auto; 
@@ -228,60 +216,44 @@ textarea{
     display: inline;
 }
 
-/*-----Menu responsive--------*/
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-nav div {
-    text-align: center;
-    font-size:40px;
-    display: none;
-}
-.nav_responsive{
-    position: relative;
-    z-index:1;
-}
-    .nav_responsive li{
-        font-size: 28px;
-        display: block;
-        background-color: LightSlateGray ;
-        text-align: center;
-    }
-    .nav_responsive li ul{
-        display: none;
-        position: relative; /*Posición sobre el raiz*/
-        
-        width: 100%;
-    }
-    nav li:hover > ul{ /*sub ul se coloca debajo cuando se pasa el ratón por encima*/
-        display: block;
-    }
-    .nav_responsive li:hover ul li:hover{
-        background-color: Lavender;
-    }
-    .nav_responsive li ul li{
-        background-color: LightBlue ;
-        position: relative;
-        font-size: 25px;
-        display: block;
-        width:100%;
-    }
 @media only screen and (max-width: 1095px) {
-    nav ul{
-        position: relative;
-    }
-    main{
-        position: relative;
-    }
-    nav .nav_unresponsive {
-        display: none;
-    }
     nav div {
         display: block;
     }
+
+    nav .nav_list_menu{   
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: relative;
+        display: none;
+        z-index:1;
+    }
+
+    nav .nav_list_menu li{
+        display: block;
+        background-color: LightSlateGray ;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    nav .nav_list_menu li ul {
+        min-width: none;
+        position: relative;  
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    nav.nav_responsive li ul li{
+        width:100%;
+    }
+
+    main{
+        position: relative;
+    }
+    
+    
     .nav_responsive{
         display:none;
     }
