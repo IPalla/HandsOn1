@@ -117,9 +117,9 @@ aside {
     margin-left: 10px;
     margin-right: 10px;
     font-family: 'Titillium Web', sans-serif;
-
-
 }
+
+
  
 .infobox{
     width:auto; 
@@ -275,6 +275,7 @@ textarea{
         align-content: center;
         margin: auto;
         position: relative;
+        margin-top: 20px;
     }
         .fotoPlano img{
             width: 90%;
