@@ -336,21 +336,7 @@ footer {
     header h1{
         font-size: 1.5rem;
     }
-} 
-main{
-    text-align: center;
-    align-content: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto; 
 }
-main .pistas, .precios{
-    margin-left: auto;
-    margin-right: auto; 
-}
-    main .FichaTiempo td{
-        padding: 10px;
-    }
 
 
 /* RESPONSIVE DE ABOUT */
