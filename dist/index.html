@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es" > 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SCentral Stations</title>
+    
+    <!-- Estilos y JS -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Pragati+Narrow" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./../node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./assets/icono_snow.png">
+    <link rel="import" href="./templates/LaPinilla.html" title="LaPinilla">
+    <link rel="import" href="./templates/Valdesqui.html" title="Valdesqui">
+    <link rel="import" href="./templates/PuertoDeNavacerrada.html" title="PuertoDeNavacerrada">
+    <link rel="import" href="./templates/SierraDeBejar.html" title="SierraDeBejar">
+    <link rel="import" href="./templates/About.html" title="About">
+    <link rel="import" href="./templates/form.html" title="Form">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="./bundle.js" type="module"></script>
+<body>
+    <header>
+        <figure>
+            <img  id="iconoprincipal" src="./assets/icono_snow.png" alt="SCentral Stations icon" title="SCentral Stations">
+        </figure>
+        <h1>SCentral Stations</h1>
+        <p>Información de las estaciones de esquí del Sistema Central.</p>
+    </header>
+
+    <nav>
+        <div id="panel_expand">
+            <i id="expand" class="fa fa-plus-square-o"></i>
+            <i id="contract" class="fa fa-minus-square-o"></i>
+        </div>
+            <ul class="nav_list_menu" id='nav_responsive'>
+                <li><a href="" id="btnEstaciones">Estaciones</a>
+                    <ul>
+                        <li><a href="" id="btnPuertoDeNavacerrada">Puerto de Navacerrada</a></li>
+                        <li><a href="" id="btnSierraDeBejar">Sierra de Béjar</a></li>
+                        <li><a href="" id="btnValdesqui">Valdesquí</a></li>
+                        <li><a href="" id="btnLaPinilla">La Pinilla</a></li>
+                    </ul>
+                </li>
+                <li><a href="" id="btnAbout">About Us</a></li>
+            </ul> 
+    </nav>
+    <aside>
+            <table class="infobox">
+                <tbody>
+                    <tr>
+                        <th colspan="3" class="cabecera mapa">Sistema Central</th>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <a href="//commons.wikimedia.org/wiki/File:Sistema_Central.png" class="image">
+                                <img alt="Sistema Central.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Sistema_Central.png/273px-Sistema_Central.png"
+                                    width="273" height="235" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Sistema_Central.png/410px-Sistema_Central.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Sistema_Central.png/546px-Sistema_Central.png 2x"
+                                    data-file-width="992" data-file-height="854">
+                            </a>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="3" class="fondooscuro">Localización geográfico-administrativa</th>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="fondoclaro">Continente</th>
+                        <td colspan="2">
+                            <a title="Europa">Europa</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="fondoclaro">País(es)</th>
+                        <td colspan="2">
+                            <span class="flagicon">
+                                <img alt="Flag of Spain.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/20px-Flag_of_Spain.svg.png"
+                                    width="20" height="13" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/30px-Flag_of_Spain.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/40px-Flag_of_Spain.svg.png 2x"
+                                    data-file-width="750" data-file-height="500">&nbsp;</span>
+                            <a title="España">España</a>
+                            <br>
+                            <img alt="Flag of Portugal.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/20px-Flag_of_Portugal.svg.png"
+                                width="20" height="13" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/30px-Flag_of_Portugal.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/40px-Flag_of_Portugal.svg.png 2x"
+                                data-file-width="600" data-file-height="400">
+                            <a title="Portugal">Portugal</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="3" class="fondooscuro">Características geográficas</th>
+                    </tr>
+                
+                    <tr>
+                        <th scope="row" class="fondoclaro">
+                            <a title="Orientación">Orientación</a>
+                        </th>
+                        <td colspan="2">De oeste-suroeste a este-noreste</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="fondoclaro">Máx. cota</th>
+                        <td colspan="2">
+                            <a title="Pico Almanzor">Pico Almanzor</a> (2592
+                            <a class="mw-redirect" title="Msnm">msnm</a>)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="fondoclaro">Cumbres</th>
+                        <td colspan="2">
+                            <a title="Pico Almanzor">Pico Almanzor</a>,
+                            <a title="Canchal de la Ceja">Canchal de la Ceja</a>,
+                            <a title="Peñalara">Peñalara</a> y
+                            <a title="Pico del Lobo">Pico del Lobo</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="fondoclaro">
+                            <a title="Piedemonte">Piedemonte</a>
+                        </th>
+                        <td colspan="2">400 a 1200 msnm</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="fondoclaro">Longitud</th>
+                        <td colspan="2">600
+                            <a class="mw-redirect" title="Km">km</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="fondoclaro">Anchura</th>
+                        <td colspan="2">30
+                            <a class="mw-redirect" title="Km">km</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </aside>
+    <main>
+                       
+    </main>
+    <footer>
+        <address>
+            <div class="vcard">
+                <p>
+                    <span class="org">BABEL Sistemas de Información</span> - 
+                    <span class="adr">
+                        <span class="locality">Madrid</span>
+                        <span class="country-name">España</span>
+                    </span>
+                </p>
+                <p>
+                    <figure>
+                        <img src="./assets/logo_BABEL_PNG_Fondo transparente.png" alt="Babel Sistemas de Informacion">
+                    </figure>
+                </p>
+            </div>
+        </address>
+    </footer>
+   
+    
+</body>
+</html>

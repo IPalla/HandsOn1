@@ -1,0 +1,79 @@
+<template id="About">
+    <div class="perfiles">
+        <h2>Nuestro equipo</h2>
+        <div class="perfil">
+            <h3>Ignacio Pallares</h3>
+            <figure>
+                <img src="./assets/IgnacioPallares.png" alt="Foto Ignacio Pallarés">
+            </figure>
+            <h4>
+                Ignacio Pallarés es estudiante de último curso de Ingeniería Informática en la Escuela Politécnica Superior de la UAM. Actualmente está cursando la Beca BabelCamp 2018. Es experto en CSS y HTML5. Practica esquí.
+                en Babel Servicios de información.
+            </h4>
+            <div class="social">
+                <h4><a href="mailto: ignacio.pallares@babel.es"><i class="fa fa-envelope" alt ="david.gonzalez@babel.es"></i></a>
+                <h4><a href="https://www.linkedin.com/in/ignacio-pallar%C3%A9s-jim%C3%A9nez-393358157/"> <i class="fa fa-linkedin"></i></a></h4>
+            </div>
+        </div>
+        <div class="perfil">
+            <h3>Ángel Martín</h3>
+            <figure>
+                <img src="./assets/AngelMartin.png" alt="Foto Ángel Martín">
+            </figure>
+            <h4>
+                Ángel Martín es estudiante de último año de Ingeniería Informática en la UVA (Universidad de Valladolid). Actualmente está cursando la Beca BabelCamp 2018 en Babel. Le apasiona la maquetación y el CSS. Practica snowboard y la falta de páginas web con información acerca de las pistas le motivó para la creación de la SCentral Stations.
+            </h4>
+            
+            <div class="social">
+                <h4><a href="mailto: angel.martin@babel.es"><i class="fa fa-envelope" alt ="david.gonzalez@babel.es"></i></a>
+                <h4><a href="https://es.linkedin.com/in/angel-martin-bartolome-458591ba"> <i class="fa fa-linkedin"></i></a></h4>
+            </div>
+        </div>
+        <div class="perfil">
+                <h3>David González</h3>
+                <figure>
+                    <img src="./assets/DavidGonzalez.png" alt="Foto David González">
+                </figure>
+                <h4>
+                    David González es estudiante de ingeniería de telecomunicaciones en la universidad Rey Juan Carlos. Actualmente está cursando la Beca BabelCamp 2018 en Babel. Sus dos pasiones son los videojuegos y la lectura.
+                </h4>
+                
+            <div class="social">
+                <h4><a href="mailto: david.gonzalez@babel.es"><i class="fa fa-envelope" alt ="david.gonzalez@babel.es"></i></a>
+                <h4><a href="https://es.linkedin.com/in/david-gonz%C3%A1lez-endrinal-aa0492a2"> <i class="fa fa-linkedin"></i></a></h4>
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+        <h2>Contacta con nosotros <i class="fa fa-comments"></i></h2>
+        <form>
+            <p>
+                <label for="Nombre" id="label_Nombre">Nombre:</label>
+                <input type="text" id="Nombre" name="Nombre" size="30" placeholder="Escriba su nombre" autocomplete='name'>
+            </p>
+            <p>
+                <label for="Email" id="label_Email">Email:</label>
+                <input type="email" id="Email" name="Email" size="30" placeholder="Escriba su correo" autocomplete='email'>
+            </p>
+            <p>
+                <ul>
+                    <li><label id="label_Preferencia" for="Preferencia">Preferencia:</label></li>
+                    <li>
+                        <ul>
+                            <li><input type="radio" value="esqui" name="Preferencia" id="Preferencia_esqui" /> Esquí</li>
+                            <li><input type="radio" value="snow" name="Preferencia" id="Preferencia_snow" /> Snow</li>
+                        </ul>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                    <label for="Comentario" id="label_Comentario">Comentario:</label>
+            </p>
+            <p>
+                <textarea name="Comentario" id="Comentario" rows="6"></textarea>
+            </p>
+            <button>Enviar</button>
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+</template>
